@@ -10,7 +10,7 @@
 
 @interface Venue : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic, readonly) NSInteger *venueId;
+@property (nonatomic, readonly) int venueId;
 @property (nonatomic, copy, readonly) NSString *name;
 
 + (id)venueFromJSON:(NSDictionary *)JSON;

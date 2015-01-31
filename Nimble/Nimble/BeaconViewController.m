@@ -10,6 +10,7 @@
 #import <POP/POP.h>
 #import <NSTimer-Blocks/NSTimer+Blocks.h>
 #import "Venue.h"
+#import "VenueViewController.h"
 
 
 #define ESTIMOTE_PROXIMITY_UUID             [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"]
@@ -311,8 +312,10 @@
     showAnimationFive.beginTime = CACurrentMediaTime() + 2.2;
     [self.animationFive pop_addAnimation:showAnimationFive forKey:@"showToastAnimation"];
     
-    [self getVenueData];
-    
+    showAnimationFive.completionBlock = ^(POPAnimation *anim, BOOL finished) {
+        [self getVenueData];
+    };
+
 }
 
 
@@ -334,8 +337,21 @@
     [[APIClient sharedInstance] getVenueForBeaconMajorId:_currentBeacon.major completion:^(Venue *venue, NSError *error) {
       
 //        Venue *returnedVenue = (Venue *)[results objectAtIndex:0];
-        NSLog(@"venue name: %@", venue.name);
+        NSLog(@"venue name: %@, and id: %d", venue.name, venue.venueId);
         
+        UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        VenueViewController *venueVC = [sb instantiateViewControllerWithIdentifier:@"venueVC"];
+//        VenueViewController *venueVC = [[VenueViewController alloc] init];
+        
+//        VenueViewController *venueVC = [[VenueViewController alloc]init];
+        venueVC.venue = venue;
+        
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:venueVC];
+        nav.navigationBar.hidden = YES;
+        
+        [self presentViewController:nav animated:YES completion:nil];
+//        [self.navigationController pushViewController:venueVC animated:YES];
+
         
     }];
     

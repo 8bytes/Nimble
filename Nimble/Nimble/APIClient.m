@@ -64,20 +64,34 @@ static APIClient *sharedInstance;
 //        block(nil, error);
 //        
 //    }];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager PUT:@"http://getnimbleapp.com/user/2" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        Venue *newVenue = [Venue venueFromJSON:[responseObject objectForKey:@"restaurant"]];
+        block(newVenue, nil);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        block(nil, error);
+        
+    }];
 
     
-    
-    [self PUT:@"user/2" parameters:params resultClass:Venue.class resultKeyPath:@"restaurant" completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
-       
-        NSLog(@"connected: %@", responseObject);
-        
-        Venue *current = (Venue *)responseObject;
-        
-        block(current, error);
-        
-        
-//        block(responseObject, error);
-    }];
+//    
+//    [self PUT:@"user/2" parameters:params resultClass:Venue.class resultKeyPath:@"restaurant" completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+//       
+//        NSLog(@"connected: %@", responseObject);
+//        
+//        Venue *current = (Venue *)responseObject;
+//        
+//        
+//        
+//        block(current, error);
+//        
+//        
+////        block(responseObject, error);
+//    }];
 
 }
 

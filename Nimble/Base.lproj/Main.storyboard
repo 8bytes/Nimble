@@ -75,6 +75,35 @@
             </objects>
             <point key="canvasLocation" x="1523" y="541"/>
         </scene>
+        <!--Venue View Controller-->
+        <scene sceneID="saA-lY-mCW">
+            <objects>
+                <viewController storyboardIdentifier="venueVC" autoresizesArchivedViewToFullSize="NO" id="GKt-HW-jgw" customClass="VenueViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M0N-oc-R3f"/>
+                        <viewControllerLayoutGuide type="bottom" id="9bI-9j-upp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dnU-h5-k2Q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tb-0S-5Nt">
+                                <rect key="frame" x="16" y="100" width="568" height="115"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="5Tb-0S-5Nt" id="u2r-fQ-TD3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Og6-P7-rPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2964" y="541"/>
+        </scene>
         <!--Beacon View Controller-->
         <scene sceneID="If5-cu-0hv">
             <objects>
@@ -87,20 +116,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mor-yF-xwX">
-                                <rect key="frame" x="31" y="246" width="440" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pww-sK-P4t">
-                                <rect key="frame" x="31" y="300" width="440" height="52"/>
+                                <rect key="frame" x="31" y="512" width="440" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJ3-tf-Ils">
-                                <rect key="frame" x="31" y="375" width="440" height="52"/>
+                                <rect key="frame" x="31" y="544" width="440" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -152,6 +175,12 @@
                                     <constraint firstAttribute="trailing" secondItem="jQM-Xa-zW3" secondAttribute="trailing" id="jdb-iw-s3X"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mor-yF-xwX">
+                                <rect key="frame" x="31" y="475" width="440" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -170,11 +199,12 @@
                         <outlet property="beaconName" destination="QJ3-tf-Ils" id="WLo-A1-Jsc"/>
                         <outlet property="distanceLabel" destination="mor-yF-xwX" id="CHJ-Os-fKU"/>
                         <outlet property="searchingLabel" destination="jQM-Xa-zW3" id="xm5-8p-9lT"/>
+                        <segue destination="GKt-HW-jgw" kind="show" identifier="toVenueVC" id="cgC-uN-Jjg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKb-Q5-fEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2264" y="541"/>
+            <point key="canvasLocation" x="2247" y="541"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ebc-ha-Icw">
