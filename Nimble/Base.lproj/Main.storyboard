@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2IX-IS-dIM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,7 +29,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUB-qQ-UiH"/>
+                                    <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXk-l6-51D"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foe-NQ-b5u">
@@ -43,21 +43,28 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IOD-8x-6Ui"/>
-                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="splashLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4jp-Uq-DQJ">
+                                <rect key="frame" x="140" y="60" width="320" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="BtO-qF-cz7"/>
+                                    <constraint firstAttribute="height" constant="213" id="eiX-zQ-wFY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Foe-NQ-b5u" secondAttribute="trailing" constant="-1" id="0OB-gf-aIQ"/>
                             <constraint firstItem="U90-9m-49G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-1" id="7ey-q5-nHn"/>
+                            <constraint firstItem="4jp-Uq-DQJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="EJL-5t-OQ3"/>
                             <constraint firstItem="U90-9m-49G" firstAttribute="width" secondItem="Foe-NQ-b5u" secondAttribute="width" id="Gnw-cz-6Qc"/>
                             <constraint firstItem="Foe-NQ-b5u" firstAttribute="leading" secondItem="U90-9m-49G" secondAttribute="trailing" constant="10" id="Mn4-iO-ne0"/>
+                            <constraint firstAttribute="centerX" secondItem="4jp-Uq-DQJ" secondAttribute="centerX" id="S7r-Hz-Oet"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="U90-9m-49G" secondAttribute="bottom" constant="15" id="XmB-E4-x83"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Foe-NQ-b5u" secondAttribute="bottom" constant="15" id="yZo-lD-ugy"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Tje-ci-bUM"/>
                     <connections>
                         <outlet property="loginButton" destination="Foe-NQ-b5u" id="8Rs-wV-qf8"/>
                         <outlet property="signUpButton" destination="U90-9m-49G" id="6Or-Sw-Nhc"/>
@@ -65,7 +72,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87" y="513"/>
+            <point key="canvasLocation" x="1523" y="541"/>
+        </scene>
+        <!--Beacon View Controller-->
+        <scene sceneID="If5-cu-0hv">
+            <objects>
+                <viewController id="h7H-qe-D79" customClass="BeaconViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yi9-O1-qA9"/>
+                        <viewControllerLayoutGuide type="bottom" id="XMd-Ty-LeL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="91J-0I-QJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mor-yF-xwX">
+                                <rect key="frame" x="31" y="159" width="440" height="133"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uoh-Z6-Zj8"/>
+                    <connections>
+                        <outlet property="distanceLabel" destination="mor-yF-xwX" id="CHJ-Os-fKU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKb-Q5-fEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2251" y="541"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ebc-ha-Icw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2IX-IS-dIM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rqw-Jc-7fH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aVC-qI-VaB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ama-uQ-yzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711" y="541"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splashLogo" width="320" height="213"/>
+    </resources>
 </document>

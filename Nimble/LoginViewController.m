@@ -6,13 +6,14 @@
 //  Copyright (c) 2015 HubSpot. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LoginViewController.h"
+#import "BeaconViewController.h"
 
-@interface ViewController ()
+@interface LoginViewController ()
 
 @end
 
-@implementation ViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,6 +36,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)signUpButtonPressed:(id)sender{
+    
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+//    Company100ViewController * vc = (Company100ViewController *)[sb instantiateViewControllerWithIdentifier:@"vc-identifier"];
+    
+    BeaconViewController *beaconVC = [[BeaconViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:beaconVC];
+    [self presentViewController:nav animated:YES completion:nil];
+    
+    
+}
+- (IBAction)loginButtonPressed:(id)sender{
+    
 }
 
 @end

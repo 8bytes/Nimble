@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		2C29D3571A7CE0D1003DFB8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D3561A7CE0D1003DFB8D /* main.m */; };
 		2C29D35A1A7CE0D1003DFB8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D3591A7CE0D1003DFB8D /* AppDelegate.m */; };
-		2C29D35D1A7CE0D1003DFB8D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D35C1A7CE0D1003DFB8D /* ViewController.m */; };
+		2C29D35D1A7CE0D1003DFB8D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D35C1A7CE0D1003DFB8D /* LoginViewController.m */; };
 		2C29D3601A7CE0D1003DFB8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C29D35E1A7CE0D1003DFB8D /* Main.storyboard */; };
 		2C29D3621A7CE0D1003DFB8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C29D3611A7CE0D1003DFB8D /* Images.xcassets */; };
 		2C29D3651A7CE0D1003DFB8D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C29D3631A7CE0D1003DFB8D /* LaunchScreen.xib */; };
 		2C29D3711A7CE0D1003DFB8D /* NimbleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D3701A7CE0D1003DFB8D /* NimbleTests.m */; };
 		2C29D37C1A7CEBDD003DFB8D /* UserInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D37B1A7CEBDD003DFB8D /* UserInterface.m */; };
+		2C29D37F1A7CF62A003DFB8D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C29D37E1A7CF62A003DFB8D /* CoreBluetooth.framework */; };
+		2C29D3821A7CF675003DFB8D /* BeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D3811A7CF675003DFB8D /* BeaconViewController.m */; };
+		2C29D3841A7CF83B003DFB8D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C29D3831A7CF83B003DFB8D /* CoreLocation.framework */; };
 		9CD026A790617286D09D5575 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFD3CE695114E14C4185625 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +37,8 @@
 		2C29D3561A7CE0D1003DFB8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C29D3581A7CE0D1003DFB8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C29D3591A7CE0D1003DFB8D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2C29D35B1A7CE0D1003DFB8D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2C29D35C1A7CE0D1003DFB8D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2C29D35B1A7CE0D1003DFB8D /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2C29D35C1A7CE0D1003DFB8D /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2C29D35F1A7CE0D1003DFB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C29D3611A7CE0D1003DFB8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C29D3641A7CE0D1003DFB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -45,6 +48,10 @@
 		2C29D37A1A7CEBDD003DFB8D /* UserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInterface.h; path = Nimble/UserInterface.h; sourceTree = "<group>"; };
 		2C29D37B1A7CEBDD003DFB8D /* UserInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInterface.m; path = Nimble/UserInterface.m; sourceTree = "<group>"; };
 		2C29D37D1A7CEC1A003DFB8D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Nimble/Nimble/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		2C29D37E1A7CF62A003DFB8D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		2C29D3801A7CF675003DFB8D /* BeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconViewController.h; path = Nimble/BeaconViewController.h; sourceTree = "<group>"; };
+		2C29D3811A7CF675003DFB8D /* BeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconViewController.m; path = Nimble/BeaconViewController.m; sourceTree = "<group>"; };
+		2C29D3831A7CF83B003DFB8D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		64C83983B45AFF1668D456E3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CEFD3CE695114E14C4185625 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF298B9C890853B2404269D9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C29D3841A7CF83B003DFB8D /* CoreLocation.framework in Frameworks */,
+				2C29D37F1A7CF62A003DFB8D /* CoreBluetooth.framework in Frameworks */,
 				9CD026A790617286D09D5575 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,9 +103,11 @@
 			children = (
 				2C29D3581A7CE0D1003DFB8D /* AppDelegate.h */,
 				2C29D3591A7CE0D1003DFB8D /* AppDelegate.m */,
-				2C29D35B1A7CE0D1003DFB8D /* ViewController.h */,
-				2C29D35C1A7CE0D1003DFB8D /* ViewController.m */,
+				2C29D35B1A7CE0D1003DFB8D /* LoginViewController.h */,
+				2C29D35C1A7CE0D1003DFB8D /* LoginViewController.m */,
 				2C29D35E1A7CE0D1003DFB8D /* Main.storyboard */,
+				2C29D3801A7CF675003DFB8D /* BeaconViewController.h */,
+				2C29D3811A7CF675003DFB8D /* BeaconViewController.m */,
 				2C29D37A1A7CEBDD003DFB8D /* UserInterface.h */,
 				2C29D37B1A7CEBDD003DFB8D /* UserInterface.m */,
 				2C29D3611A7CE0D1003DFB8D /* Images.xcassets */,
@@ -145,6 +156,8 @@
 		ED97BC4C1CD8EEAAB6FC0C17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C29D3831A7CF83B003DFB8D /* CoreLocation.framework */,
+				2C29D37E1A7CF62A003DFB8D /* CoreBluetooth.framework */,
 				CEFD3CE695114E14C4185625 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -285,9 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C29D35D1A7CE0D1003DFB8D /* ViewController.m in Sources */,
+				2C29D35D1A7CE0D1003DFB8D /* LoginViewController.m in Sources */,
 				2C29D35A1A7CE0D1003DFB8D /* AppDelegate.m in Sources */,
 				2C29D37C1A7CEBDD003DFB8D /* UserInterface.m in Sources */,
+				2C29D3821A7CF675003DFB8D /* BeaconViewController.m in Sources */,
 				2C29D3571A7CE0D1003DFB8D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
