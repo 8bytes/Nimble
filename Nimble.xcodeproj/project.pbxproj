@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C0B42B71A7D029C009DE73F /* libPods-EstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0B42B61A7D029C009DE73F /* libPods-EstimoteSDK.a */; };
+		2C0B42BD1A7D24CB009DE73F /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B42BC1A7D24CB009DE73F /* Venue.m */; };
+		2C0B42C31A7D375E009DE73F /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B42C21A7D375E009DE73F /* APIClient.m */; };
 		2C29D3571A7CE0D1003DFB8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D3561A7CE0D1003DFB8D /* main.m */; };
 		2C29D35A1A7CE0D1003DFB8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D3591A7CE0D1003DFB8D /* AppDelegate.m */; };
 		2C29D35D1A7CE0D1003DFB8D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D35C1A7CE0D1003DFB8D /* LoginViewController.m */; };
@@ -34,6 +36,10 @@
 
 /* Begin PBXFileReference section */
 		2C0B42B61A7D029C009DE73F /* libPods-EstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-EstimoteSDK.a"; path = "Pods/build/Debug-iphoneos/libPods-EstimoteSDK.a"; sourceTree = "<group>"; };
+		2C0B42BB1A7D24CB009DE73F /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Venue.h; path = Nimble/Venue.h; sourceTree = "<group>"; };
+		2C0B42BC1A7D24CB009DE73F /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Venue.m; path = Nimble/Venue.m; sourceTree = "<group>"; };
+		2C0B42C11A7D375E009DE73F /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIClient.h; path = Nimble/APIClient.h; sourceTree = "<group>"; };
+		2C0B42C21A7D375E009DE73F /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIClient.m; path = Nimble/APIClient.m; sourceTree = "<group>"; };
 		2C29D3511A7CE0D1003DFB8D /* Nimble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C29D3551A7CE0D1003DFB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C29D3561A7CE0D1003DFB8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,6 +115,10 @@
 				2C29D35B1A7CE0D1003DFB8D /* LoginViewController.h */,
 				2C29D35C1A7CE0D1003DFB8D /* LoginViewController.m */,
 				2C29D35E1A7CE0D1003DFB8D /* Main.storyboard */,
+				2C0B42BB1A7D24CB009DE73F /* Venue.h */,
+				2C0B42BC1A7D24CB009DE73F /* Venue.m */,
+				2C0B42C11A7D375E009DE73F /* APIClient.h */,
+				2C0B42C21A7D375E009DE73F /* APIClient.m */,
 				2C29D3801A7CF675003DFB8D /* BeaconViewController.h */,
 				2C29D3811A7CF675003DFB8D /* BeaconViewController.m */,
 				2C29D37A1A7CEBDD003DFB8D /* UserInterface.h */,
@@ -303,6 +313,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C29D35D1A7CE0D1003DFB8D /* LoginViewController.m in Sources */,
+				2C0B42C31A7D375E009DE73F /* APIClient.m in Sources */,
+				2C0B42BD1A7D24CB009DE73F /* Venue.m in Sources */,
 				2C29D35A1A7CE0D1003DFB8D /* AppDelegate.m in Sources */,
 				2C29D37C1A7CEBDD003DFB8D /* UserInterface.m in Sources */,
 				2C29D3821A7CF675003DFB8D /* BeaconViewController.m in Sources */,

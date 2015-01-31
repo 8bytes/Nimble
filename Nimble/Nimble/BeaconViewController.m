@@ -9,6 +9,7 @@
 #import "BeaconViewController.h"
 #import <POP/POP.h>
 #import <NSTimer-Blocks/NSTimer+Blocks.h>
+#import "Venue.h"
 
 
 #define ESTIMOTE_PROXIMITY_UUID             [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"]
@@ -22,6 +23,7 @@
 @property (nonatomic, strong) ESTBeaconManager *beaconManager;
 @property (nonatomic, strong) ESTBeaconRegion *region;
 @property (nonatomic, strong) NSArray *beaconsArray;
+@property (nonatomic, strong) ESTBeacon *currentBeacon;
 
 @property BOOL beaconFound;
 
@@ -248,6 +250,7 @@
                 [self preformAnimation];
                 
             } repeats:NO];
+            _currentBeacon = closestBeacon;
             _beaconFound = YES;
             
         }
@@ -308,7 +311,7 @@
     showAnimationFive.beginTime = CACurrentMediaTime() + 2.2;
     [self.animationFive pop_addAnimation:showAnimationFive forKey:@"showToastAnimation"];
     
-    
+    [self getVenueData];
     
 }
 
@@ -323,6 +326,19 @@
     self.animationFive.transform = CGAffineTransformMakeScale(0.001, 0.001);
     
     _beaconFound = NO;
+    
+}
+
+-(void)getVenueData{
+     
+    [[APIClient sharedInstance] getVenueForBeaconMajorId:_currentBeacon.major completion:^(Venue *venue, NSError *error) {
+      
+//        Venue *returnedVenue = (Venue *)[results objectAtIndex:0];
+        NSLog(@"venue name: %@", venue.name);
+        
+        
+    }];
+    
     
 }
 
