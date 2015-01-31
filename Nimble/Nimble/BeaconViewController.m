@@ -27,6 +27,7 @@
 @property (nonatomic, strong) ESTBeacon *currentBeacon;
 
 @property BOOL beaconFound;
+@property int count;
 
 @end
 
@@ -78,6 +79,7 @@
     [self.view addGestureRecognizer:resetTap];
     
     self.searchingLabel.textColor = kGreenTintColor;
+    _count = 0;
     
 }
 
@@ -244,7 +246,9 @@
                 break;
         }
         
-        if(!_beaconFound){
+        _count++;
+        
+        if(!_beaconFound && _count>5){
             
             [NSTimer scheduledTimerWithTimeInterval:2.0 block:^{
                 
