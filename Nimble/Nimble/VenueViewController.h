@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *venueNameLabel;
 @property (strong, nonatomic) IBOutlet UIButton *payNowButton;
 @property (strong, nonatomic) IBOutlet UILabel *orderDetails;
+@property (strong, nonatomic) IBOutlet UILabel *priceLabel;
 - (IBAction)payNowPressed:(id)sender;
 
 @end

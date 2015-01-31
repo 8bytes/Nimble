@@ -10,6 +10,7 @@
 
 #import "Venue.h"
 
+
 #define BYBaseURL @"http://getnimbleapp.com/"
 //#define BYBaseURL @"http://172.16.24.153:3000/"
 static APIClient *sharedInstance;
@@ -93,6 +94,34 @@ static APIClient *sharedInstance;
 ////        block(responseObject, error);
 //    }];
 
+}
+
+
+- (void)getOrderDetailsForVenue:(int)venueId completion:(void (^)(Order *order, NSError *error))block{
+
+//    [self GET:[NSString stringWithFormat:@"http://getnimbleapp.com/order/?restaurant=%d", venueId] parameters:nil resultClass:Order.class resultKeyPath:@"" completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+//        
+//        NSLog(@"respose: %@", responseObject);
+//        Order *newOrder = [Order init]
+//        block(newOrder, nil);
+//    }];
+//    
+//    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:[NSString stringWithFormat:@"http://getnimbleapp.com/order/?restaurant=%d", venueId] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        Order *newOrder = [Order orderFromJSON:responseObject];
+        block(newOrder, nil);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        block(nil, error);
+        
+    }];
+
+    
+
+    
 }
 
 @end

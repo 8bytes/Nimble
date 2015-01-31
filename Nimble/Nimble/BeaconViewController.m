@@ -332,11 +332,11 @@
   
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    if(_beaconFound == YES){
-        [self reset];
-    }
-}
+//-(void)viewDidAppear:(BOOL)animated{
+//    if(_beaconFound == YES){
+//        [self reset];
+//    }
+//}
 
 -(void)getVenueData{
      
@@ -355,8 +355,8 @@
         UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:venueVC];
         nav.navigationBar.hidden = YES;
         
-        [self presentViewController:nav animated:YES completion:nil];
-//        [self.navigationController pushViewController:venueVC animated:YES];
+//        [self presentViewController:nav animated:YES completion:nil];
+        [self.navigationController pushViewController:venueVC animated:YES];
 
         
     }];

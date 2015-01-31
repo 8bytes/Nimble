@@ -30,7 +30,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXk-l6-51D"/>
-                                    <segue destination="h7H-qe-D79" kind="presentation" id="JJY-ou-o9b"/>
+                                    <segue destination="h7H-qe-D79" kind="show" id="JJY-ou-o9b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foe-NQ-b5u">
@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3V-64-Www">
-                                <rect key="frame" x="15" y="50" width="570" height="50"/>
+                                <rect key="frame" x="15" y="70" width="570" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3Pi-IL-2br"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ArA-25-EvX"/>
@@ -118,10 +118,11 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Details" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpO-UC-Mnb">
-                                <rect key="frame" x="15" y="165" width="570" height="351"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpO-UC-Mnb">
+                                <rect key="frame" x="15" y="230" width="570" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="2ml-r3-Nd0"/>
+                                    <constraint firstAttribute="height" constant="60" id="5Gn-8g-zdC"/>
                                     <constraint firstAttribute="height" constant="50" id="VmV-N7-5zf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
@@ -129,15 +130,31 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="VmV-N7-5zf"/>
                                         <exclude reference="2ml-r3-Nd0"/>
+                                        <exclude reference="VmV-N7-5zf"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DxH-wL-SKX">
+                                <rect key="frame" x="15" y="295" width="570" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="MyJ-tB-9jk"/>
+                                    <constraint firstAttribute="height" constant="50" id="QQx-hL-Dt1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="QQx-hL-Dt1"/>
+                                        <exclude reference="MyJ-tB-9jk"/>
                                     </mask>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the dean" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tb-0S-5Nt">
-                                <rect key="frame" x="15" y="100" width="570" height="50"/>
+                                <rect key="frame" x="15" y="120" width="570" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="47D-yz-KAQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="47D-yz-KAQ"/>
                                     <constraint firstAttribute="height" constant="115" id="YFU-OK-I0e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
@@ -154,22 +171,26 @@
                         <constraints>
                             <constraint firstItem="j4d-aC-fbm" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="2SA-Fi-qzX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="x3V-64-Www" secondAttribute="trailing" constant="-1" id="43j-ft-MNJ"/>
-                            <constraint firstItem="x3V-64-Www" firstAttribute="top" secondItem="M0N-oc-R3f" secondAttribute="bottom" constant="30" id="5D2-n8-vQM"/>
+                            <constraint firstItem="j4d-aC-fbm" firstAttribute="top" secondItem="DxH-wL-SKX" secondAttribute="bottom" constant="80" id="57E-c0-XOE"/>
+                            <constraint firstItem="x3V-64-Www" firstAttribute="top" secondItem="M0N-oc-R3f" secondAttribute="bottom" constant="50" id="5D2-n8-vQM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="j4d-aC-fbm" secondAttribute="trailing" constant="-1" id="BMZ-WP-Uiq"/>
+                            <constraint firstItem="DxH-wL-SKX" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="Hti-6d-eLK"/>
                             <constraint firstItem="5Tb-0S-5Nt" firstAttribute="top" secondItem="x3V-64-Www" secondAttribute="bottom" id="RZA-Pc-xXQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Tb-0S-5Nt" secondAttribute="trailing" constant="-1" id="SRg-ny-uGJ"/>
                             <constraint firstItem="WpO-UC-Mnb" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="TeQ-4J-ZmH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DxH-wL-SKX" secondAttribute="trailing" constant="-1" id="bAH-db-eLG"/>
+                            <constraint firstItem="DxH-wL-SKX" firstAttribute="top" secondItem="WpO-UC-Mnb" secondAttribute="bottom" constant="5" id="cq5-Rl-pQd"/>
                             <constraint firstItem="x3V-64-Www" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="fxo-Z4-Lp0"/>
-                            <constraint firstItem="WpO-UC-Mnb" firstAttribute="top" secondItem="5Tb-0S-5Nt" secondAttribute="bottom" constant="15" id="hHX-xk-Rv2"/>
+                            <constraint firstItem="WpO-UC-Mnb" firstAttribute="top" secondItem="5Tb-0S-5Nt" secondAttribute="bottom" constant="80" id="hHX-xk-Rv2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WpO-UC-Mnb" secondAttribute="trailing" constant="-1" id="mBt-GA-72g"/>
                             <constraint firstItem="5Tb-0S-5Nt" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="mYd-xD-gPX"/>
                             <constraint firstItem="9bI-9j-upp" firstAttribute="top" secondItem="j4d-aC-fbm" secondAttribute="bottom" constant="15" id="nYt-gI-cxe"/>
-                            <constraint firstItem="j4d-aC-fbm" firstAttribute="top" secondItem="WpO-UC-Mnb" secondAttribute="bottom" constant="19" id="oFp-fK-oNs"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="orderDetails" destination="WpO-UC-Mnb" id="mqj-ZL-O2E"/>
                         <outlet property="payNowButton" destination="j4d-aC-fbm" id="2CL-xy-6gb"/>
+                        <outlet property="priceLabel" destination="DxH-wL-SKX" id="erV-Nk-KNy"/>
                         <outlet property="venueNameLabel" destination="5Tb-0S-5Nt" id="Xbt-CQ-uYR"/>
                         <outlet property="welcomeLabel" destination="x3V-64-Www" id="8Fu-dA-q40"/>
                     </connections>

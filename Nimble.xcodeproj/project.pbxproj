@@ -11,6 +11,7 @@
 		2C0B42BD1A7D24CB009DE73F /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B42BC1A7D24CB009DE73F /* Venue.m */; };
 		2C0B42C31A7D375E009DE73F /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B42C21A7D375E009DE73F /* APIClient.m */; };
 		2C0B42C61A7D4746009DE73F /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B42C51A7D4746009DE73F /* VenueViewController.m */; };
+		2C0B42C91A7D64BB009DE73F /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B42C81A7D64BB009DE73F /* Order.m */; };
 		2C29D3571A7CE0D1003DFB8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D3561A7CE0D1003DFB8D /* main.m */; };
 		2C29D35A1A7CE0D1003DFB8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D3591A7CE0D1003DFB8D /* AppDelegate.m */; };
 		2C29D35D1A7CE0D1003DFB8D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D35C1A7CE0D1003DFB8D /* LoginViewController.m */; };
@@ -43,6 +44,8 @@
 		2C0B42C21A7D375E009DE73F /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIClient.m; path = Nimble/APIClient.m; sourceTree = "<group>"; };
 		2C0B42C41A7D4746009DE73F /* VenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VenueViewController.h; path = Nimble/VenueViewController.h; sourceTree = "<group>"; };
 		2C0B42C51A7D4746009DE73F /* VenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VenueViewController.m; path = Nimble/VenueViewController.m; sourceTree = "<group>"; };
+		2C0B42C71A7D64BB009DE73F /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Order.h; path = Nimble/Order.h; sourceTree = "<group>"; };
+		2C0B42C81A7D64BB009DE73F /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Order.m; path = Nimble/Order.m; sourceTree = "<group>"; };
 		2C29D3511A7CE0D1003DFB8D /* Nimble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C29D3551A7CE0D1003DFB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C29D3561A7CE0D1003DFB8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				2C29D35E1A7CE0D1003DFB8D /* Main.storyboard */,
 				2C0B42BB1A7D24CB009DE73F /* Venue.h */,
 				2C0B42BC1A7D24CB009DE73F /* Venue.m */,
+				2C0B42C71A7D64BB009DE73F /* Order.h */,
+				2C0B42C81A7D64BB009DE73F /* Order.m */,
 				2C0B42C11A7D375E009DE73F /* APIClient.h */,
 				2C0B42C21A7D375E009DE73F /* APIClient.m */,
 				2C29D3801A7CF675003DFB8D /* BeaconViewController.h */,
@@ -317,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0B42C91A7D64BB009DE73F /* Order.m in Sources */,
 				2C29D35D1A7CE0D1003DFB8D /* LoginViewController.m in Sources */,
 				2C0B42C31A7D375E009DE73F /* APIClient.m in Sources */,
 				2C0B42C61A7D4746009DE73F /* VenueViewController.m in Sources */,

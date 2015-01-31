@@ -7,6 +7,8 @@
 //
 
 #import "VenueViewController.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <NSTimer-Blocks/NSTimer+Blocks.h>
 
 @interface VenueViewController ()
 
@@ -39,13 +41,45 @@
     [self.payNowButton setTitleColor:kGreenTintColor forState:UIControlStateNormal];
     self.payNowButton.backgroundColor = [UIColor clearColor];
     
-    self.orderDetails = [UIFont fontWithName:@"Avenir-Light" size:30];
+    self.orderDetails.font = [UIFont fontWithName:@"Avenir-Light" size:22];
+    self.orderDetails.textColor = [UIColor whiteColor];
+    
+    self.priceLabel.font = [UIFont fontWithName:@"Avenir-Light" size:80];
+    self.priceLabel.textColor = [UIColor whiteColor];
+    
+    
+    
+    [SVProgressHUD setForegroundColor:kGreenTintColor];
+    [SVProgressHUD setRingThickness:2.0];
+    [self getOrderDetails];
+    [SVProgressHUD show];
+    
+}
+
+- (void)getOrderDetails{
+    
+    [NSTimer scheduledTimerWithTimeInterval:2.0 block:^{
+        
+        [[APIClient sharedInstance]getOrderDetailsForVenue:_venue.venueId completion:^(Order *order, NSError *error) {
+ 
+            
+         
+//            if([orders count]>0){
+//                Order *theOrder = [orders objectAtIndex:0];
+                NSLog(@"Order Total: %d", order.price);
+            self.orderDetails.text = @"Your Order";
+            self.priceLabel.text = [NSString stringWithFormat:@"€%d", order.price];
+            [SVProgressHUD dismiss];
+        }];
+        
+    } repeats:YES];
     
 }
 
 - (void)close{
+    [self.navigationController popViewControllerAnimated:YES];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
