@@ -30,6 +30,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXk-l6-51D"/>
+                                    <segue destination="h7H-qe-D79" kind="presentation" id="JJY-ou-o9b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foe-NQ-b5u">
@@ -87,27 +88,98 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mor-yF-xwX">
-                                <rect key="frame" x="31" y="159" width="440" height="133"/>
+                                <rect key="frame" x="31" y="246" width="440" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pww-sK-P4t">
+                                <rect key="frame" x="31" y="300" width="440" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJ3-tf-Ils">
+                                <rect key="frame" x="31" y="375" width="440" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUN-wF-dPg">
+                                <rect key="frame" x="140" y="229" width="320" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for venues..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQM-Xa-zW3">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9w4-VT-g4m">
+                                        <rect key="frame" x="115" y="0.0" width="90" height="90"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="animationOne" translatesAutoresizingMaskIntoConstraints="NO" id="4Wf-Yf-5Nu" userLabel="One">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="animationTwo" translatesAutoresizingMaskIntoConstraints="NO" id="mbd-64-Yyo" userLabel="Two">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="animationThree" translatesAutoresizingMaskIntoConstraints="NO" id="7Zp-j3-PBW" userLabel="Three">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="animationFour" translatesAutoresizingMaskIntoConstraints="NO" id="BK6-6k-txz" userLabel="Four">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="animationFive" translatesAutoresizingMaskIntoConstraints="NO" id="u1l-BV-STt" userLabel="Five">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="X3h-52-SBu"/>
+                                            <constraint firstAttribute="height" constant="90" id="ybS-Ua-kps"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="3dJ-QP-O4b"/>
+                                    <constraint firstItem="9w4-VT-g4m" firstAttribute="top" secondItem="dUN-wF-dPg" secondAttribute="top" id="A8P-zs-Xaj"/>
+                                    <constraint firstAttribute="centerX" secondItem="9w4-VT-g4m" secondAttribute="centerX" id="DNE-yK-Z7U"/>
+                                    <constraint firstItem="jQM-Xa-zW3" firstAttribute="leading" secondItem="dUN-wF-dPg" secondAttribute="leading" id="GgM-tk-1ac"/>
+                                    <constraint firstAttribute="width" constant="320" id="HsV-D0-kFg"/>
+                                    <constraint firstAttribute="bottom" secondItem="jQM-Xa-zW3" secondAttribute="bottom" id="T14-vR-7S8"/>
+                                    <constraint firstItem="jQM-Xa-zW3" firstAttribute="top" secondItem="dUN-wF-dPg" secondAttribute="top" id="fdg-rA-x3L"/>
+                                    <constraint firstAttribute="trailing" secondItem="jQM-Xa-zW3" secondAttribute="trailing" id="jdb-iw-s3X"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="dUN-wF-dPg" secondAttribute="centerY" constant="26" id="8cp-KG-V7S"/>
+                            <constraint firstAttribute="centerX" secondItem="dUN-wF-dPg" secondAttribute="centerX" id="UZ4-Dd-a7H"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uoh-Z6-Zj8"/>
                     <connections>
+                        <outlet property="animationFive" destination="u1l-BV-STt" id="UOW-fs-sXh"/>
+                        <outlet property="animationFour" destination="BK6-6k-txz" id="rpe-0g-Jml"/>
+                        <outlet property="animationOne" destination="4Wf-Yf-5Nu" id="Ns0-nW-Los"/>
+                        <outlet property="animationThree" destination="7Zp-j3-PBW" id="mH7-aE-s0f"/>
+                        <outlet property="animationTwo" destination="mbd-64-Yyo" id="OEG-2U-Smd"/>
+                        <outlet property="beaconDetails" destination="Pww-sK-P4t" id="nwt-v7-81b"/>
+                        <outlet property="beaconName" destination="QJ3-tf-Ils" id="WLo-A1-Jsc"/>
                         <outlet property="distanceLabel" destination="mor-yF-xwX" id="CHJ-Os-fKU"/>
+                        <outlet property="searchingLabel" destination="jQM-Xa-zW3" id="xm5-8p-9lT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKb-Q5-fEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2251" y="541"/>
+            <point key="canvasLocation" x="2264" y="541"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ebc-ha-Icw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2IX-IS-dIM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="2IX-IS-dIM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rqw-Jc-7fH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -115,7 +187,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aVC-qI-VaB"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0b5-T1-B4z"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ama-uQ-yzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -124,6 +196,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="animationFive" width="90" height="90"/>
+        <image name="animationFour" width="90" height="90"/>
+        <image name="animationOne" width="90" height="90"/>
+        <image name="animationThree" width="90" height="90"/>
+        <image name="animationTwo" width="90" height="90"/>
         <image name="splashLogo" width="320" height="213"/>
     </resources>
 </document>

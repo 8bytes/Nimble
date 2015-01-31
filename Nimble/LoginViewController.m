@@ -30,6 +30,9 @@
     self.loginButton.layer.masksToBounds = YES;
     self.loginButton.layer.borderColor = kGreenTintColor.CGColor;
     [self.loginButton setTitleColor:kGreenTintColor forState:UIControlStateNormal];
+    self.loginButton.backgroundColor = [UIColor clearColor];
+    
+    self.view.backgroundColor = kViewBackgroundColor;
 
 }
 
@@ -40,12 +43,7 @@
 
 - (IBAction)signUpButtonPressed:(id)sender{
     
-//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-//    Company100ViewController * vc = (Company100ViewController *)[sb instantiateViewControllerWithIdentifier:@"vc-identifier"];
-    
-    BeaconViewController *beaconVC = [[BeaconViewController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:beaconVC];
-    [self presentViewController:nav animated:YES completion:nil];
+
     
     
 }

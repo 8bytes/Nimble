@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    [[UIView appearance]setBackgroundColor:kViewBackgroundColor];
+//    [[UIView appearance]setBackgroundColor:kViewBackgroundColor];
     
     return YES;
 }

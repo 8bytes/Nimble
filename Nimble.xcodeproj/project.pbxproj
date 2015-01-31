@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0B42B71A7D029C009DE73F /* libPods-EstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0B42B61A7D029C009DE73F /* libPods-EstimoteSDK.a */; };
 		2C29D3571A7CE0D1003DFB8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D3561A7CE0D1003DFB8D /* main.m */; };
 		2C29D35A1A7CE0D1003DFB8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D3591A7CE0D1003DFB8D /* AppDelegate.m */; };
 		2C29D35D1A7CE0D1003DFB8D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D35C1A7CE0D1003DFB8D /* LoginViewController.m */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C0B42B61A7D029C009DE73F /* libPods-EstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-EstimoteSDK.a"; path = "Pods/build/Debug-iphoneos/libPods-EstimoteSDK.a"; sourceTree = "<group>"; };
 		2C29D3511A7CE0D1003DFB8D /* Nimble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C29D3551A7CE0D1003DFB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C29D3561A7CE0D1003DFB8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0B42B71A7D029C009DE73F /* libPods-EstimoteSDK.a in Frameworks */,
 				2C29D3841A7CF83B003DFB8D /* CoreLocation.framework in Frameworks */,
 				2C29D37F1A7CF62A003DFB8D /* CoreBluetooth.framework in Frameworks */,
 				9CD026A790617286D09D5575 /* libPods.a in Frameworks */,
@@ -156,6 +159,7 @@
 		ED97BC4C1CD8EEAAB6FC0C17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C0B42B61A7D029C009DE73F /* libPods-EstimoteSDK.a */,
 				2C29D3831A7CF83B003DFB8D /* CoreLocation.framework */,
 				2C29D37E1A7CF62A003DFB8D /* CoreBluetooth.framework */,
 				CEFD3CE695114E14C4185625 /* libPods.a */,
@@ -430,6 +434,10 @@
 				GCC_PREFIX_HEADER = Nimble/Nimble/PrefixHeader.pch;
 				INFOPLIST_FILE = Nimble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -442,6 +450,10 @@
 				GCC_PREFIX_HEADER = Nimble/Nimble/PrefixHeader.pch;
 				INFOPLIST_FILE = Nimble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
