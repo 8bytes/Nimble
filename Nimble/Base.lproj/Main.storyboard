@@ -78,7 +78,7 @@
         <!--Venue View Controller-->
         <scene sceneID="saA-lY-mCW">
             <objects>
-                <viewController storyboardIdentifier="venueVC" autoresizesArchivedViewToFullSize="NO" id="GKt-HW-jgw" customClass="VenueViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="venueVC" autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="currentContext" id="GKt-HW-jgw" customClass="VenueViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M0N-oc-R3f"/>
                         <viewControllerLayoutGuide type="bottom" id="9bI-9j-upp"/>
@@ -87,17 +87,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tb-0S-5Nt">
-                                <rect key="frame" x="16" y="100" width="568" height="115"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4d-aC-fbm">
+                                <rect key="frame" x="15" y="535" width="570" height="50"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.88235294119999996" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="R7c-O9-7Sc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Pay Now">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="payNowPressed:" destination="GKt-HW-jgw" eventType="touchUpInside" id="bAc-l2-haN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3V-64-Www">
+                                <rect key="frame" x="15" y="50" width="570" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Pi-IL-2br"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ArA-25-EvX"/>
+                                    <constraint firstAttribute="height" constant="115" id="FD4-TT-mFv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FD4-TT-mFv"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Details" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpO-UC-Mnb">
+                                <rect key="frame" x="15" y="165" width="570" height="351"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="2ml-r3-Nd0"/>
+                                    <constraint firstAttribute="height" constant="50" id="VmV-N7-5zf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VmV-N7-5zf"/>
+                                        <exclude reference="2ml-r3-Nd0"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the dean" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tb-0S-5Nt">
+                                <rect key="frame" x="15" y="100" width="570" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="47D-yz-KAQ"/>
+                                    <constraint firstAttribute="height" constant="115" id="YFU-OK-I0e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YFU-OK-I0e"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j4d-aC-fbm" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="2SA-Fi-qzX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x3V-64-Www" secondAttribute="trailing" constant="-1" id="43j-ft-MNJ"/>
+                            <constraint firstItem="x3V-64-Www" firstAttribute="top" secondItem="M0N-oc-R3f" secondAttribute="bottom" constant="30" id="5D2-n8-vQM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j4d-aC-fbm" secondAttribute="trailing" constant="-1" id="BMZ-WP-Uiq"/>
+                            <constraint firstItem="5Tb-0S-5Nt" firstAttribute="top" secondItem="x3V-64-Www" secondAttribute="bottom" id="RZA-Pc-xXQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Tb-0S-5Nt" secondAttribute="trailing" constant="-1" id="SRg-ny-uGJ"/>
+                            <constraint firstItem="WpO-UC-Mnb" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="TeQ-4J-ZmH"/>
+                            <constraint firstItem="x3V-64-Www" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="fxo-Z4-Lp0"/>
+                            <constraint firstItem="WpO-UC-Mnb" firstAttribute="top" secondItem="5Tb-0S-5Nt" secondAttribute="bottom" constant="15" id="hHX-xk-Rv2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WpO-UC-Mnb" secondAttribute="trailing" constant="-1" id="mBt-GA-72g"/>
+                            <constraint firstItem="5Tb-0S-5Nt" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="mYd-xD-gPX"/>
+                            <constraint firstItem="9bI-9j-upp" firstAttribute="top" secondItem="j4d-aC-fbm" secondAttribute="bottom" constant="15" id="nYt-gI-cxe"/>
+                            <constraint firstItem="j4d-aC-fbm" firstAttribute="top" secondItem="WpO-UC-Mnb" secondAttribute="bottom" constant="19" id="oFp-fK-oNs"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="welcomeLabel" destination="5Tb-0S-5Nt" id="u2r-fQ-TD3"/>
+                        <outlet property="orderDetails" destination="WpO-UC-Mnb" id="mqj-ZL-O2E"/>
+                        <outlet property="payNowButton" destination="j4d-aC-fbm" id="2CL-xy-6gb"/>
+                        <outlet property="venueNameLabel" destination="5Tb-0S-5Nt" id="Xbt-CQ-uYR"/>
+                        <outlet property="welcomeLabel" destination="x3V-64-Www" id="8Fu-dA-q40"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Og6-P7-rPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -199,7 +273,6 @@
                         <outlet property="beaconName" destination="QJ3-tf-Ils" id="WLo-A1-Jsc"/>
                         <outlet property="distanceLabel" destination="mor-yF-xwX" id="CHJ-Os-fKU"/>
                         <outlet property="searchingLabel" destination="jQM-Xa-zW3" id="xm5-8p-9lT"/>
-                        <segue destination="GKt-HW-jgw" kind="show" identifier="toVenueVC" id="cgC-uN-Jjg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKb-Q5-fEs" userLabel="First Responder" sceneMemberID="firstResponder"/>

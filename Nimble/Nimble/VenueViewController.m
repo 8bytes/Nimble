@@ -20,7 +20,33 @@
     
     self.view.backgroundColor = kViewBackgroundColor;
     
-    self.welcomeLabel.text = [NSString stringWithFormat:@"Welcome to the %@", self.venue.name];
+    self.welcomeLabel.textColor = kGreenTintColor;
+    self.welcomeLabel.font = [UIFont fontWithName:@"Avenir-Light" size:30];
+    
+    self.venueNameLabel.text = [NSString stringWithFormat:@"the %@", self.venue.name];
+    self.venueNameLabel.textColor = kGreenTintColor;
+    self.venueNameLabel.font = [UIFont fontWithName:@"Avenir-Light" size:24];
+    
+    
+    UITapGestureRecognizer *resetTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close)];
+    [resetTap setNumberOfTapsRequired:3];
+    [self.view addGestureRecognizer:resetTap];
+    
+    self.payNowButton.layer.borderWidth = 1.0f;
+    self.payNowButton.layer.cornerRadius = 4.0f;
+    self.payNowButton.layer.masksToBounds = YES;
+    self.payNowButton.layer.borderColor = kGreenTintColor.CGColor;
+    [self.payNowButton setTitleColor:kGreenTintColor forState:UIControlStateNormal];
+    self.payNowButton.backgroundColor = [UIColor clearColor];
+    
+    self.orderDetails = [UIFont fontWithName:@"Avenir-Light" size:30];
+    
+}
+
+- (void)close{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,4 +64,6 @@
 }
 */
 
+- (IBAction)payNowPressed:(id)sender {
+}
 @end

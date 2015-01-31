@@ -13,5 +13,9 @@
 
 @property (nonatomic, strong) Venue *venue;
 @property (strong, nonatomic) IBOutlet UILabel *welcomeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *venueNameLabel;
+@property (strong, nonatomic) IBOutlet UIButton *payNowButton;
+@property (strong, nonatomic) IBOutlet UILabel *orderDetails;
+- (IBAction)payNowPressed:(id)sender;
 
 @end

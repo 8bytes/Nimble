@@ -329,7 +329,13 @@
     self.animationFive.transform = CGAffineTransformMakeScale(0.001, 0.001);
     
     _beaconFound = NO;
-    
+  
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    if(_beaconFound == YES){
+        [self reset];
+    }
 }
 
 -(void)getVenueData{
