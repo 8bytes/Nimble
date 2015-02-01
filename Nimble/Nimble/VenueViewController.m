@@ -43,6 +43,13 @@
     [self.payNowButton setTitleColor:kGreenTintColor forState:UIControlStateNormal];
     self.payNowButton.backgroundColor = [UIColor clearColor];
     
+    self.splitBillButton.layer.borderWidth = 1.0f;
+    self.splitBillButton.layer.cornerRadius = 4.0f;
+    self.splitBillButton.layer.masksToBounds = YES;
+    self.splitBillButton.layer.borderColor = kGreenTintColor.CGColor;
+    [self.splitBillButton setTitleColor:kGreenTintColor forState:UIControlStateNormal];
+    self.splitBillButton.backgroundColor = [UIColor clearColor];
+    
     self.orderDetails.font = [UIFont fontWithName:@"Avenir-Light" size:22];
     self.orderDetails.textColor = [UIColor whiteColor];
     
@@ -70,14 +77,19 @@
             
 //                Order *theOrder = [orders objectAtIndex:0];
                 NSLog(@"Order Total: %d", order.price);
-            self.orderDetails.text = @"Your Order";
+            self.orderDetails.text = @"Due on your order";
             self.priceLabel.text = [NSString stringWithFormat:@"€%d", order.price];
+            [UIView animateWithDuration:0.8 animations:^{
+                self.payNowButton.alpha = 1;
+                self.splitBillButton.alpha = 1;
+            }];
             
             if(order.price <= 0){
                 self.orderDetails.text = @"Thank You";
                 self.priceLabel.text = @"Paid";
                 [UIView animateWithDuration:0.8 animations:^{
                     self.payNowButton.alpha = 0;
+                    self.splitBillButton.alpha = 0;
                 }];
             }
             
@@ -113,11 +125,64 @@
 
 - (IBAction)payNowPressed:(id)sender {
     
-    [[APIClient sharedInstance]pay:20 onOrder:self.currentOrder completion:^(Order *order, NSError *error) {
+    [[APIClient sharedInstance]pay:self.currentOrder.price onOrder:self.currentOrder completion:^(Order *order, NSError *error) {
         
         NSLog(@"New price: %d", order.price);
+        if(order.price <= 0){
+            self.orderDetails.text = @"Thank You";
+            self.priceLabel.text = @"Paid";
+            [UIView animateWithDuration:0.8 animations:^{
+                self.payNowButton.alpha = 0;
+                self.splitBillButton.alpha = 0;
+            }];
+        }
         
     }];
+    
+}
+
+- (IBAction)splitBillPressed:(id)sender {
+    
+    HSToastView *splitToast = [[HSToastView alloc]initWithTitle:@"Split the bill" message:@"How much do you wish to pay?" andImage:[UIImage imageNamed:@"toastIcon"]];
+    splitToast.inlineImage = NO;
+    
+    [splitToast addButtonWithText:@"25%" backgroundColor:kGreenTintColor titleColor:kViewBackgroundColor completion:^(UIButton *button, HSToastView *toastView){
+        
+        [[APIClient sharedInstance]pay:(self.currentOrder.price/4) onOrder:self.currentOrder completion:^(Order *order, NSError *error) {
+            
+            NSLog(@"New price: %d", order.price);
+            self.priceLabel.text = [NSString stringWithFormat:@"€%d", order.price];
+            [toastView hideToast];
+            
+        }];
+        
+    }];
+    
+    [splitToast addButtonWithText:@"50%" backgroundColor:kGreenTintColor titleColor:kViewBackgroundColor completion:^(UIButton *button, HSToastView *toastView){
+    
+        [[APIClient sharedInstance]pay:(self.currentOrder.price/2) onOrder:self.currentOrder completion:^(Order *order, NSError *error) {
+            
+            NSLog(@"New price: %d", order.price);
+            self.priceLabel.text = [NSString stringWithFormat:@"€%d", order.price];
+            [toastView hideToast];
+            
+        }];
+        
+    }];
+    
+    [splitToast addButtonWithText:@"75%" backgroundColor:kGreenTintColor titleColor:kViewBackgroundColor completion:^(UIButton *button, HSToastView *toastView){
+        
+        [[APIClient sharedInstance]pay:((self.currentOrder.price/4)*3) onOrder:self.currentOrder completion:^(Order *order, NSError *error) {
+            
+            NSLog(@"New price: %d", order.price);
+            self.priceLabel.text = [NSString stringWithFormat:@"€%d", order.price];
+            [toastView hideToast];
+            
+        }];
+        
+    }];
+    
+    [splitToast showOnView:self.view];
     
 }
 @end

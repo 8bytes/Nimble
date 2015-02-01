@@ -23,6 +23,9 @@
 		2C29D37F1A7CF62A003DFB8D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C29D37E1A7CF62A003DFB8D /* CoreBluetooth.framework */; };
 		2C29D3821A7CF675003DFB8D /* BeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29D3811A7CF675003DFB8D /* BeaconViewController.m */; };
 		2C29D3841A7CF83B003DFB8D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C29D3831A7CF83B003DFB8D /* CoreLocation.framework */; };
+		2C6E75F01A7E2DCF0003CF0F /* HSToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E75EF1A7E2DCF0003CF0F /* HSToastView.m */; };
+		2C6E75F41A7E30E10003CF0F /* HSToastViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E75F31A7E30E10003CF0F /* HSToastViewButton.m */; };
+		2C6E75F61A7E312F0003CF0F /* HSToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6E75F51A7E312F0003CF0F /* HSToastView.xib */; };
 		9CD026A790617286D09D5575 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFD3CE695114E14C4185625 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,11 @@
 		2C29D3801A7CF675003DFB8D /* BeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconViewController.h; path = Nimble/BeaconViewController.h; sourceTree = "<group>"; };
 		2C29D3811A7CF675003DFB8D /* BeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconViewController.m; path = Nimble/BeaconViewController.m; sourceTree = "<group>"; };
 		2C29D3831A7CF83B003DFB8D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2C6E75EE1A7E2DCF0003CF0F /* HSToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSToastView.h; path = Nimble/HSToastView.h; sourceTree = "<group>"; };
+		2C6E75EF1A7E2DCF0003CF0F /* HSToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSToastView.m; path = Nimble/HSToastView.m; sourceTree = "<group>"; };
+		2C6E75F21A7E30E10003CF0F /* HSToastViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSToastViewButton.h; path = Nimble/HSToastViewButton.h; sourceTree = "<group>"; };
+		2C6E75F31A7E30E10003CF0F /* HSToastViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSToastViewButton.m; path = Nimble/HSToastViewButton.m; sourceTree = "<group>"; };
+		2C6E75F51A7E312F0003CF0F /* HSToastView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HSToastView.xib; path = Nimble/HSToastView.xib; sourceTree = "<group>"; };
 		64C83983B45AFF1668D456E3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CEFD3CE695114E14C4185625 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF298B9C890853B2404269D9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,8 +139,7 @@
 				2C29D3811A7CF675003DFB8D /* BeaconViewController.m */,
 				2C0B42C41A7D4746009DE73F /* VenueViewController.h */,
 				2C0B42C51A7D4746009DE73F /* VenueViewController.m */,
-				2C29D37A1A7CEBDD003DFB8D /* UserInterface.h */,
-				2C29D37B1A7CEBDD003DFB8D /* UserInterface.m */,
+				2C6E75F11A7E2DD20003CF0F /* UI */,
 				2C29D3611A7CE0D1003DFB8D /* Images.xcassets */,
 				2C29D3631A7CE0D1003DFB8D /* LaunchScreen.xib */,
 				2C29D3541A7CE0D1003DFB8D /* Supporting Files */,
@@ -165,6 +172,20 @@
 				2C29D36F1A7CE0D1003DFB8D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C6E75F11A7E2DD20003CF0F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2C29D37A1A7CEBDD003DFB8D /* UserInterface.h */,
+				2C29D37B1A7CEBDD003DFB8D /* UserInterface.m */,
+				2C6E75EE1A7E2DCF0003CF0F /* HSToastView.h */,
+				2C6E75EF1A7E2DCF0003CF0F /* HSToastView.m */,
+				2C6E75F51A7E312F0003CF0F /* HSToastView.xib */,
+				2C6E75F21A7E30E10003CF0F /* HSToastViewButton.h */,
+				2C6E75F31A7E30E10003CF0F /* HSToastViewButton.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		5EFEEE2A40E7E03CA14EFF38 /* Pods */ = {
@@ -271,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C29D3601A7CE0D1003DFB8D /* Main.storyboard in Resources */,
+				2C6E75F61A7E312F0003CF0F /* HSToastView.xib in Resources */,
 				2C29D3651A7CE0D1003DFB8D /* LaunchScreen.xib in Resources */,
 				2C29D3621A7CE0D1003DFB8D /* Images.xcassets in Resources */,
 			);
@@ -330,6 +352,8 @@
 				2C0B42BD1A7D24CB009DE73F /* Venue.m in Sources */,
 				2C29D35A1A7CE0D1003DFB8D /* AppDelegate.m in Sources */,
 				2C29D37C1A7CEBDD003DFB8D /* UserInterface.m in Sources */,
+				2C6E75F01A7E2DCF0003CF0F /* HSToastView.m in Sources */,
+				2C6E75F41A7E30E10003CF0F /* HSToastViewButton.m in Sources */,
 				2C29D3821A7CF675003DFB8D /* BeaconViewController.m in Sources */,
 				2C29D3571A7CE0D1003DFB8D /* main.m in Sources */,
 			);
