@@ -127,25 +127,9 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpO-UC-Mnb">
-                                <rect key="frame" x="15" y="230" width="570" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="2ml-r3-Nd0"/>
-                                    <constraint firstAttribute="height" constant="60" id="5Gn-8g-zdC"/>
-                                    <constraint firstAttribute="height" constant="50" id="VmV-N7-5zf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2ml-r3-Nd0"/>
-                                        <exclude reference="VmV-N7-5zf"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DxH-wL-SKX">
-                                <rect key="frame" x="15" y="295" width="570" height="160"/>
+                                <rect key="frame" x="15" y="230" width="570" height="160"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="MyJ-tB-9jk"/>
                                     <constraint firstAttribute="height" constant="50" id="QQx-hL-Dt1"/>
@@ -190,25 +174,44 @@
                                     <action selector="splitBillPressed:" destination="GKt-HW-jgw" eventType="touchUpInside" id="bWl-nO-QCz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpO-UC-Mnb">
+                                <rect key="frame" x="15" y="395" width="570" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="2ml-r3-Nd0"/>
+                                    <constraint firstAttribute="height" constant="60" id="5Gn-8g-zdC"/>
+                                    <constraint firstAttribute="height" constant="50" id="VmV-N7-5zf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2ml-r3-Nd0"/>
+                                        <exclude reference="VmV-N7-5zf"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="j4d-aC-fbm" firstAttribute="top" secondItem="WpO-UC-Mnb" secondAttribute="bottom" constant="80" id="1Hd-YK-bBA"/>
                             <constraint firstItem="UCj-pw-I3p" firstAttribute="width" secondItem="j4d-aC-fbm" secondAttribute="width" id="2G5-Ad-JLM"/>
                             <constraint firstItem="j4d-aC-fbm" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="2SA-Fi-qzX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="x3V-64-Www" secondAttribute="trailing" constant="-1" id="43j-ft-MNJ"/>
-                            <constraint firstItem="j4d-aC-fbm" firstAttribute="top" secondItem="DxH-wL-SKX" secondAttribute="bottom" constant="80" id="57E-c0-XOE"/>
                             <constraint firstItem="x3V-64-Www" firstAttribute="top" secondItem="M0N-oc-R3f" secondAttribute="bottom" constant="50" id="5D2-n8-vQM"/>
+                            <constraint firstItem="WpO-UC-Mnb" firstAttribute="top" secondItem="DxH-wL-SKX" secondAttribute="bottom" constant="5" id="ACi-LA-Lf7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="j4d-aC-fbm" secondAttribute="trailing" constant="-1" id="BMZ-WP-Uiq"/>
                             <constraint firstItem="DxH-wL-SKX" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="Hti-6d-eLK"/>
                             <constraint firstItem="5Tb-0S-5Nt" firstAttribute="top" secondItem="x3V-64-Www" secondAttribute="bottom" id="RZA-Pc-xXQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Tb-0S-5Nt" secondAttribute="trailing" constant="-1" id="SRg-ny-uGJ"/>
                             <constraint firstItem="WpO-UC-Mnb" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="TeQ-4J-ZmH"/>
+                            <constraint firstItem="DxH-wL-SKX" firstAttribute="top" secondItem="5Tb-0S-5Nt" secondAttribute="bottom" constant="80" id="ZfO-mB-uNs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DxH-wL-SKX" secondAttribute="trailing" constant="-1" id="bAH-db-eLG"/>
                             <constraint firstItem="9bI-9j-upp" firstAttribute="top" secondItem="UCj-pw-I3p" secondAttribute="bottom" constant="15" id="cb6-cD-Y84"/>
                             <constraint firstItem="DxH-wL-SKX" firstAttribute="top" secondItem="WpO-UC-Mnb" secondAttribute="bottom" constant="5" id="cq5-Rl-pQd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UCj-pw-I3p" secondAttribute="trailing" constant="-1" id="d2x-Ah-viD"/>
                             <constraint firstItem="x3V-64-Www" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="fxo-Z4-Lp0"/>
-                            <constraint firstItem="WpO-UC-Mnb" firstAttribute="top" secondItem="5Tb-0S-5Nt" secondAttribute="bottom" constant="80" id="hHX-xk-Rv2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WpO-UC-Mnb" secondAttribute="trailing" constant="-1" id="mBt-GA-72g"/>
                             <constraint firstItem="5Tb-0S-5Nt" firstAttribute="leading" secondItem="dnU-h5-k2Q" secondAttribute="leadingMargin" constant="-1" id="mYd-xD-gPX"/>
                             <constraint firstItem="9bI-9j-upp" firstAttribute="top" secondItem="j4d-aC-fbm" secondAttribute="bottom" constant="15" id="nYt-gI-cxe"/>
@@ -216,6 +219,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="cq5-Rl-pQd"/>
                                 <exclude reference="BMZ-WP-Uiq"/>
                             </mask>
                         </variation>
