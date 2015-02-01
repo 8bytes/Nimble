@@ -27,7 +27,7 @@
     self.welcomeLabel.textColor = kGreenTintColor;
     self.welcomeLabel.font = [UIFont fontWithName:@"Avenir-Light" size:30];
     
-    self.venueNameLabel.text = [NSString stringWithFormat:@"the %@", self.venue.name];
+    self.venueNameLabel.text = [NSString stringWithFormat:@"%@", self.venue.name];
     self.venueNameLabel.textColor = kGreenTintColor;
     self.venueNameLabel.font = [UIFont fontWithName:@"Avenir-Light" size:24];
     
