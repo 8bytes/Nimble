@@ -17,5 +17,6 @@
 
 - (void)getVenueForBeaconMajorId:(NSNumber *)majorId completion:(void (^)(Venue *place, NSError *error))block;
 - (void)getOrderDetailsForVenue:(int)venueId completion:(void (^)(Order *order, NSError *error))block;
+- (void)pay:(int)ammount onOrder:(Order *)oldOrder completion:(void (^)(Order *order, NSError *error))block;
 
 @end

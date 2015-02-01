@@ -10,6 +10,7 @@
 
 @interface Order : MTLModel <MTLJSONSerializing>
 
+@property (nonatomic) int orderId;
 @property (nonatomic) int price;
 
 + (id)orderFromJSON:(NSDictionary *)JSON;

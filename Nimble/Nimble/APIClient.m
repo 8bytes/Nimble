@@ -118,10 +118,32 @@ static APIClient *sharedInstance;
         block(nil, error);
         
     }];
+    
+}
 
+- (void)pay:(int)ammount onOrder:(Order *)oldOrder completion:(void (^)(Order *order, NSError *error))block{
+    
+    
+    NSDictionary *params = @{
+                             @"paid": [NSNumber numberWithInt:ammount]
+                             };
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager PUT:[NSString stringWithFormat:@"http://getnimbleapp.com/order/%d", oldOrder.orderId] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        Order *newOrder = [[Order alloc]init];
+        newOrder = oldOrder;
+        newOrder.price = newOrder.price - ammount;
+        
+        block(newOrder, nil);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        block(nil, error);
+        
+    }];
     
 
-    
 }
 
 @end

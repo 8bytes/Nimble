@@ -12,6 +12,8 @@
 
 @interface VenueViewController ()
 
+@property (nonatomic, strong) Order *currentOrder;
+
 @end
 
 @implementation VenueViewController
@@ -65,10 +67,21 @@
             
          
 //            if([orders count]>0){
+            
 //                Order *theOrder = [orders objectAtIndex:0];
                 NSLog(@"Order Total: %d", order.price);
             self.orderDetails.text = @"Your Order";
             self.priceLabel.text = [NSString stringWithFormat:@"€%d", order.price];
+            
+            if(order.price <= 0){
+                self.orderDetails.text = @"Thank You";
+                self.priceLabel.text = @"Paid";
+                [UIView animateWithDuration:0.8 animations:^{
+                    self.payNowButton.alpha = 0;
+                }];
+            }
+            
+            self.currentOrder = order;
             [SVProgressHUD dismiss];
         }];
         
@@ -99,5 +112,12 @@
 */
 
 - (IBAction)payNowPressed:(id)sender {
+    
+    [[APIClient sharedInstance]pay:20 onOrder:self.currentOrder completion:^(Order *order, NSError *error) {
+        
+        NSLog(@"New price: %d", order.price);
+        
+    }];
+    
 }
 @end

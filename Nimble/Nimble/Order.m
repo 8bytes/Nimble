@@ -12,7 +12,8 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey{
     return @{
-             @"price": @"price"
+             @"price": @"price",
+              @"orderId": @"id"
              };
 }
 
@@ -38,6 +39,9 @@
     NSDictionary *finalDict = [orderDict objectAtIndex:0];
     int finalPrice = [[finalDict objectForKey:@"price"] intValue];
     order.price = finalPrice;
+    
+    int orderId = [[finalDict objectForKey:@"id"] intValue];
+    order.orderId = orderId;
     
     
 //    NSLog(@"JSON: %d", [[finalDict objectForKey:@"order"] intValue]);
